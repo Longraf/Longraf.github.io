@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:url" content="vk.me/longraf">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Юрий Тимофеев - верстка сайтов на HTML и CSS">
+    <meta property="og:image" content="img/orange_cat.jpg">
+    <meta property="og:description" content="Начинающий и активно развивающийся верстальщик">
+    <meta property="og:site_name" content="Портфолио верстальщика">
+    <meta property="article:author" content="Юрий Тимофеев">
+    <title>Юрий Тимофеев - Портфолио</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/fontello-embedded.css">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Фавиконка -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    			<![endif]-->
+  </head>
+  <body>
+			<header class="main">
+			<div class="main-overlay"></div>
+				<div class="wrapper">
+					<div class="main-header">
+						<h1>Юрий Тимофеев</h1>
+						<div class="main-line"><br></div>
+						<p>Верстка на HTML и CSS<br>
+							Разработка сайтов под ключ</p>
+					</div>
+				</div>
+				<a href="#" class="icon-downs"><i class="icon-down"></i></a>
+			</header>
+	<main class="portfolio">
+		<section class="container">
+			<h2 class="section-header">Портфолио</h2>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="portfolio-block">
+						<img src="img/portfolio_1.jpg" alt="Работа№1">
+						<a data-toggle="modal" data-work="work-1" href="#work">Смотреть работу</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="portfolio-block">
+						<img src="img/portfolio_2.jpg" alt="Работа№2">
+						<a data-toggle="modal" data-work="work-2" href="#work">Смотреть работу</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="portfolio-block">
+						<img src="img/portfolio_3.jpg" alt="Работа№3">
+						<a data-toggle="modal" data-work="work-3" href="#work">Смотреть работу</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<strong>Юрий Тимофеев</strong>
+					<p>Разработка сайтов
+						под ключ</p>
+				</div>
+				<div class="col-md-6">
+					<strong>Подпишитесь</strong>
+					<div class="icon-downs">
+						<a href="#"><i class="social-icon icon-vk"></i></a>
+						<a href="#"><i class="social-icon icon-instagram"></i></a>
+						<a href="#"><i class="social-icon icon-twitter"></i></a>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<strong>Напишите мне</strong>
+					<a href="https://vk.me/longraf" class="offer-btn">
+						Заказать сайт
+					</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Всплывающие окна -->
+	<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="work-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Работа № 1</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+        	<div class="col-lg-5">
+        		<img src="img/portfolio_1.jpg" alt="">
+        	</div>
+        	<div class="col-lg-7">
+        		<h4 class="modal-title">Сайт для ресторана</h4>
+        		<p>Описание сайта</p>
+        		<a href="https://vk.me/longraf" class="modal-btn">Заказать этот сайт</a>
+        	</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    	$(function() {
+    		var link = $('a[data-toggle="modal"]');
+    		link.on('click', function(event) {
+    			var work = $(this).attr('data-work');
+    			var modal = $('.modal');
+    			modal.find('.modal-body').load(work+'.html');
+    		});
+    	});
+    </script>
+  </body>
+</html>
+
+
