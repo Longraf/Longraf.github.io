@@ -35,9 +35,9 @@
 							Разработка сайтов под ключ</p>
 					</div>
 				</div>
-				<a href="#" class="icon-downs"><i class="icon-down"></i></a>
+				<a class="main-down slowly" href="#portfolio"><i class="icon-down"></i></a>
 			</header>
-	<main class="portfolio">
+	<main class="portfolio" id="portfolio">
 		<section class="container">
 			<h2 class="section-header">Портфолио</h2>
 			<div class="row">
@@ -130,6 +130,14 @@
     		});
     	});
     </script>
+	<script>
+		$(".slowly").on("click", function (event) {
+		event.preventDefault();
+		var id = $(this).attr('href'),
+		top = $(id).offset().top;
+		$('body,html').animate({scrollTop: top}, 800);
+		});
+	</script>
   </body>
 </html>
 
