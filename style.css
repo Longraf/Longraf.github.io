@@ -35,7 +35,8 @@ body {
       body .contacts .contacts__item .svg-icon {
         width: 45px;
         fill: black;
-        transition: 0.3s transform ease-out, 0.5s fill ease-in-out; }
+        transition: 0.3s transform ease-out,
+ 0.5s fill ease-in-out; }
       body .contacts .contacts__item .svg-icon:hover {
         fill: #2dd17a;
         transform: scale(1.3); }
@@ -69,12 +70,21 @@ body {
         color: #2dd17a; }
   @media (max-width: 1024px) {
     body .info {
-      font-size: 1.2rem; }
+      font-size: 1.2rem;
+      margin: 40px 40px 0;
+      text-align: center;
+    }
+    body .contacts {
+      margin: 40px 40px 0}
     body .portfolio {
-      flex-direction: column; }
-      body .portfolio .item {
-        width: 100%;
-        margin-top: 45px;
-        padding: 0; }
-        body .portfolio .item .text-wrap {
-          margin-bottom: 10px; } }
+      flex-direction: column;
+      margin: 40px 40px 0;}
+    body .portfolio .item {
+      width: 100%;
+      margin-top: 45px;
+      padding: 0; }
+    body .portfolio .item .text-wrap {
+      margin-bottom: 10px; }
+    body .portfolio .item:hover {
+      transform: scale(1.05); }
+  }
